@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins";
+}
+
+body{
+    background-color: rgba(255, 217, 0, 0.11);
+    overflow: hidden;
+}
+
+header {
+    height: 10vh;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    padding-inline: 40px;
+    text-align: center;
+    line-height: 10vh;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo {
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: "Bungee Spice";
+}
+
+.watchlist{
+    font-size: 25px;
+}
+.search-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+nav input {
+    padding: .4rem 1rem;
+    font-family: "poppins";
+    outline: none;
+    border: 1px solid gold;
+    border-radius: 10px;
+    box-shadow: 3px 8px 10px rgba(0, 0, 0, 0.1) inset;
+}
+
+nav button{
+    padding: .3rem 1rem;
+    font-family: "poppins";
+    font-size: .9rem;
+    font-weight: 400;
+    border: 1px solid orange;
+    background-color: orange;
+    color: white;
+    border-radius: 10px;
+}
+
+section{
+    padding-inline: 80px;
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 5rem;
+}
+
+.container span{
+    color: gold;
+}
+
+.container .cover-image{
+    width: 40vw;
+    object-fit: cover;
+    aspect-ratio: 1;
+    border-radius: 3rem;
+}
+
+.container .title{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    flex: 1;
+}
+
+.cover-image{
+    opacity: 1;
+    transition: opacity 5s ease;
+}
+
+.slow{
+    opacity: 0;
+}
+
+
+.movies, .moviess{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.movie-info{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    height: 100%;
+}
+
+.actors{
+    font-size: 0.9em;
+    display: flex;
+    gap: 10px;
+}
+.actors span{
+    font-weight: 500;
+}
+
+.movies img{
+    height: 350px;
+    border-radius: 10px;
+}
+
+.movie-info{
+    flex: 1;
+}
+
+.countryHead, .belongCountry{
+    font-size: .8rem;
+}
+.countryHead{
+    font-weight: 500;
+}
+
+.category{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.category span{
+    font-size: .8rem;
+    font-weight: 500;
+}
+
+.category .cat{
+    border: 1px solid gold;
+    padding-inline: 3px;
+    border-radius: 1rem;
+    background: rgba(68, 68, 68, 0.541);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.source, .value, .fa-star{
+    font-size: .8rem;
+}
+
+.catHed{
+    font-size: .8rem;
+}
+
+.released .re-head{
+    font-weight: 500;
+}
+
+.ty-hd{
+    font-weight: 500;
+}
+
+.writerHed{
+    font-weight: 500;
+}
+
+.yearHed{
+    font-weight: 500;
+}
+
+.voteHed{
+    font-size: .8rem;
+    font-weight: 500;
+}
+
+.voteCount{
+    font-size: .8rem;
+}
+
+.source{
+    font-weight: 500;
+}
+
+.plot{
+    font-size: .8rem;
+}
+
+.plotHed{
+    font-weight: 500;
+}
+
+.fa-solid{
+    color: gold;
+}
+
+.released span, .typeHead, .writer, .year span, .votes{
+    font-size: .8rem;
+}
+
+.heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.heading i{
+    font-size: 20px;
+}
+
+.popupback{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.493);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-100%);
+    transition: all .3s ease-in-out;
+}
+
+.popup, .moviess{
+    height: max-content;
+    width: 600px;
+    background-color: white;
+    position: absolute;
+    border-radius: 2rem;
+    border: 1px solid gold;
+    box-shadow: 3px 8px 10px rgba(0, 0, 0, 0.3) inset;
+    scale: 0.1;
+    transition: all .3s ease-in-out;
+}
+
+.come-ani{
+    transform: translateY(0);
+    scale: 1;
+}
+
+.watchlist-msg{
+    height: 40px;
+    width: 200px;
+    position: absolute;
+    top: 20px;
+    background-color: white;
+    right: 50%;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 40px;
+    text-transform: capitalize;
+    transform: translateY(-500px);
+    scale: 0.1;
+    transition: all .6s ease-in-out;
+}
+
+.animate{
+    transform: translateY(0);
+    scale: 1;
+}
+
+.saved-watchlist{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 90%;
+    width: 90%;
+    padding: 15px 30px;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.377);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.moviess{
+    scale: 1;
+    position: relative;
+}
+
+.hide{
+    display: none;
+}
+
+.prev, .next{
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    color: black;
+    background-color: rgba(255, 217, 0, 0.836);
+    border: 1px solid gold;
+}
+
+.backword, .forword{
+    color: black;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Explorer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="shortcut icon" href="assets/icon.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                MOVIES
+            </div>
+            <div class="search-btn">
+                <i class="fa-solid fa-heart watchlist"></i>
+                <input type="text" placeholder="search movies" class="movie-name">
+                <button class="search">
+                    search
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div class="container">
+                <div class="title">
+                    <h1>Explore Movies <br>
+                        Find your <span>Favorite</span> movie</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam, porro.</p>
+                </div>
+                <img src="assets/movie2.webp" class="cover-image">
+            </div>
+        </section>
+
+        <div class="popupback">
+            <div class="popup movies">
+            </div>
+        </div>
+        <div class="watchlist-msg">
+            added to watchlist!
+        </div>
+
+        <div class="saved-watchlist hide">
+            <button class="prev"><i class="fa-solid fa-arrow-left backword"></i></button>
+            <div class="moviess">
+            </div>
+            <button class="next">
+            <i class="fa-solid fa-arrow-right forword"></i>
+            </button>
+            
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
