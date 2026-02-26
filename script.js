@@ -14,7 +14,7 @@ searchBtn.addEventListener("click", () => {
 })
 async function fetchingData() {
     if (input.value.length > 0) {
-        let api = `http://www.omdbapi.com/?apikey=84f630b0&t=${input.value}`;
+        let api = `https://www.omdbapi.com/?apikey=84f630b0&t=${input.value}`;
         try {
             let response = await fetch(api)
             if (!response.ok) {
@@ -286,7 +286,6 @@ function changeCoverImg() {
     } else {
         i++
     }
-    console.log(i);
 }
 // changeCoverImg()
 
@@ -318,8 +317,6 @@ function Store(poster, Mname, ActName, ConName, LangName, Genre, Ratings, Rdate,
     }
     data = data.filter(movi => movi.movieName !== Mname)
     data.push(movie)
-    console.log("Stored data:", data);
-    console.log("Incoming movie:", Mname);
     localStorage.setItem("Movie", JSON.stringify(data))
     creatingMovieCardViaLocalStorage(data, idx)
 }
@@ -537,11 +534,8 @@ function creatingMovieCardViaLocalStorage(data, idx) {
     //event listener
     const heart = document.querySelector(".remLoc");
     const close = document.querySelector(".fa-circle-xmark");
-    console.log("above heart", heart);
     
-    heart.addEventListener("click", (e) => {
-        console.log("in heart");
-        
+    heart.addEventListener("click", (e) => {        
         heart.classList.remove("fa-heart");
         heart.classList.add("fa-heart-crack");
         let MovName = e.target.parentElement.parentElement.querySelector("h4").innerHTML;        
@@ -564,9 +558,7 @@ const watchlistBtn = document.querySelector(".watchlist")
 const main = document.querySelector("main")
 watchlistBtn.addEventListener("click", () => {
     moviess.innerHTML = ''
-    saved_watchlist.classList.remove("hide")
-    console.log(idx);
-    
+    saved_watchlist.classList.remove("hide")    
     if(data.length === 0){
         moviess.textContent = "watchlist is empty"
     }
@@ -588,13 +580,11 @@ if(data.length === 0){
 next.addEventListener("click", () => {
     if (idx < (data.length-1)) {
         idx++;
-        console.log(idx);
         moviess.innerHTML = ""
         creatingMovieCardViaLocalStorage(data, idx)
     }
     else {
         idx = 0
-        console.log(idx);
         moviess.innerHTML = ""
         creatingMovieCardViaLocalStorage(data, idx)
     }
@@ -606,13 +596,11 @@ if(data.length === 0){
 prev.addEventListener("click", () => {
     if (idx >= 1) {
         idx--;
-        console.log(idx);
         
         moviess.innerHTML = ""
         creatingMovieCardViaLocalStorage(data, idx)
     }
     else{
-        console.log(idx);
         idx = (data.length-1)
         moviess.innerHTML = ""
         creatingMovieCardViaLocalStorage(data, idx)
