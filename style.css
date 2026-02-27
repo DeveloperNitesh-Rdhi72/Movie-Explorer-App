@@ -44,7 +44,7 @@ nav .logo {
     gap: 10px;
 }
 nav input {
-    padding: .4rem 1rem;
+    padding: 5px 7px;
     font-family: "poppins";
     outline: none;
     border: 1px solid gold;
@@ -81,7 +81,7 @@ section{
 }
 
 .container .cover-image{
-    width: 40vw;
+    width: 200px;
     object-fit: cover;
     aspect-ratio: 1;
     border-radius: 3rem;
@@ -324,4 +324,44 @@ section{
 
 .backword, .forword{
     color: black;
+}
+
+@media (max-width: 700px) {
+    section{
+        padding: 20px;
+    }
+    .title h1{
+        font-size: 15px;
+    }
+    .container{
+        gap: 5px;
+    }
+}
+
+@media (max-width: 550px) {
+    nav{
+        flex-direction: column;
+    }
+    header{
+        height: max-content;
+        padding: 10px;
+    }
+    .container{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .popup, .moviess{
+        flex-direction: column;
+        height: 400px;
+        width: 90%;
+        overflow: auto;
+
+    }
+    .saved-watchlist{
+        padding: 0px 10px;
+    }
+    .moviess .poster{
+        object-fit: cover;
+        height: 100px;
+    }
 }
